@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505085916) do
+ActiveRecord::Schema.define(version: 20140510074427) do
+
+  create_table "invoices", force: true do |t|
+    t.string   "invoice_number"
+    t.datetime "date"
+    t.string   "make"
+    t.string   "model"
+    t.string   "serial_number"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.text     "request"
+    t.text     "description"
+    t.text     "remarks"
+    t.decimal  "parts",          precision: 2, scale: 0
+    t.decimal  "tax",            precision: 2, scale: 0
+    t.decimal  "service_call",   precision: 2, scale: 0
+    t.decimal  "labor",          precision: 2, scale: 0
+    t.decimal  "total",          precision: 2, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
