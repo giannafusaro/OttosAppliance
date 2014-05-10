@@ -55,4 +55,7 @@ Rails.application.routes.draw do
   #   end
 
   root 'user#login'
+
+  resources :invoices
+
 end

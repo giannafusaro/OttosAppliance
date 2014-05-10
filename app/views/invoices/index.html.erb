@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Invoices</h1>
+
+  <%= link_to 'New Invoice', new_invoice_path, class: 'btn btn-info' %>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Invoice Number</th>
+        <th>Date</th>
+        <th>Address</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.invoice_number %></td>
+        <td><%= invoice.date %></td>
+        <td><%= invoice.address %></td>
+        <td><%= invoice.total %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
