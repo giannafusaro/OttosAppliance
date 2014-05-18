@@ -56,6 +56,8 @@ Rails.application.routes.draw do
 
   root 'user#login'
 
+  resources :users
+
   resources :invoices
 
 end
