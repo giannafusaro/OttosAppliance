@@ -54,7 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'user#login'
+  root 'dashboard#index', as: :dashboard
+
+  match '/login' => 'users#login', as: :login, via: [ :get, :post ]
 
   resources :users
 
