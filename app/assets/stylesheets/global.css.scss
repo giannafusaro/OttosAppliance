@@ -26,3 +26,19 @@ section {
     max-width: 400px;
   }
 }
+
+.navbar-brand-right {
+  float:right;
+  padding-top:8px;
+}
+
+.inside-list-group {
+  float: center;
+}
+
+.list-group-item {
+  width: 400px;
+  .btn-primary {
+    align: center;
+  }
+}

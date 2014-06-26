@@ -1,7 +1,16 @@
 <div class="container">
   <h1>Dashboard</h1>
-
+<br/>
   <div class="options">
-    <%= link_to "Create new invoice", new_invoice_path, class: "navbar-brand" %>  
+    <ul class="list-group">
+      <div class = "inside-list-group">
+        <li class="list-group-item"><%= link_to "Create invoice", new_invoice_path, class: "btn btn-primary" %></li>
+        <li class="list-group-item"><%= link_to "Search invoices",  search_invoices_path, class:"btn btn-primary" %></li>
+        <li class="list-group-item"><%= link_to "Placeholder 1",  search_invoices_path, class:"btn btn-primary" %></li>
+        <li class="list-group-item"><%= link_to "Placeholder 2",  search_invoices_path, class:"btn btn-primary" %></li>
+        <li class="list-group-item"><%= link_to "Placeholder 3",  search_invoices_path, class:"btn btn-primary" %></li>
+      </ul>
+    </div>
+
   </div>
 </div>

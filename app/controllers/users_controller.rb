@@ -9,8 +9,7 @@ class UsersController < ApplicationController
       if @user = User.find_by_email(params[:user][:email])
         if @user.authenticate(params[:user][:password])
           session[:user_id] = @user.id
-          redirect_to session[:user_requested_url] || user_path
-          session[:user_requested_url] = nil
+          redirect_to dashboard_path
         else
           flash.now[:error] = "Your password is incorrect."
         end
@@ -18,6 +17,12 @@ class UsersController < ApplicationController
         flash.now[:error] = "There is no user with that login."
       end
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:success] = "You are now logged out"
+    redirect_to login_path
   end
 
   # def create

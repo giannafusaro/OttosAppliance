@@ -58,6 +58,10 @@ Rails.application.routes.draw do
 
   match '/login' => 'users#login', as: :login, via: [ :get, :post ]
 
+  get '/search' => 'invoices#search', as: :search_invoices
+
+  get '/logout' =>'users#logout', as: :logout
+
   resources :users
 
   resources :invoices

@@ -12,6 +12,9 @@ class InvoicesController < ApplicationController
     @invoice = Invoice.create invoice_params
   end
 
+  def search
+  end
+
   private
 
     def invoice_params
