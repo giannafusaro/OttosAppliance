@@ -1,3 +1,27 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.left-col {
+  float: left;
+  margin-right: 10px;
+}
+.right-col {
+  float: left;
+  margin-left: 10px;
+}
+ul {
+    padding-left: 0px;
+  }
+
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: -2px;
+}
+
+span.glyphicon {
+  width: 20px;
+}

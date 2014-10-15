@@ -1,16 +1,20 @@
 <div class="container">
   <h1>Dashboard</h1>
 <br/>
-  <div class="options">
-    <ul class="list-group">
-      <div class = "inside-list-group">
-        <li class="list-group-item"><%= link_to "Create invoice", new_invoice_path, class: "btn btn-primary" %></li>
-        <li class="list-group-item"><%= link_to "Search invoices",  search_invoices_path, class:"btn btn-primary" %></li>
-        <li class="list-group-item"><%= link_to "Placeholder 1",  search_invoices_path, class:"btn btn-primary" %></li>
-        <li class="list-group-item"><%= link_to "Placeholder 2",  search_invoices_path, class:"btn btn-primary" %></li>
-        <li class="list-group-item"><%= link_to "Placeholder 3",  search_invoices_path, class:"btn btn-primary" %></li>
-      </ul>
+  <div class="left-col">
+    <ul class "list-group">
+      <li>
+        <%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> Create New Invoice"), new_invoice_path,
+            class: "btn btn-default btn-lg" %>
+      </li>
+      <li>
+      <%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search All Invoices"), search_invoices_path,
+            class: "btn btn-default btn-lg" %>
+      </li>
+      <li>
+        <%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Invoices"), invoices_path,
+            class: "btn btn-default btn-lg" %>
+      </li>
     </div>
-
   </div>
 </div>
