@@ -5,3 +5,20 @@
 html {
   color: #00ff00;
 }
+
+.btn.btn-default {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+div.panel-heading.customer-info {
+  font-size: 25px;
+  background-color: rgba(102, 51, 153, 1.0);
+  color: #fff;
+  border-color: #ccc;
+}
+
+div.panel.customer-info {
+  border-color: #ccc;
+  margin-top: 35px;
+}
