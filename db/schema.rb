@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510074427) do
+ActiveRecord::Schema.define(version: 20141011183301) do
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "invoices", force: true do |t|
     t.string   "invoice_number"
@@ -33,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140510074427) do
     t.decimal  "total",          precision: 2, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "customer_id"
   end
 
   create_table "users", force: true do |t|
