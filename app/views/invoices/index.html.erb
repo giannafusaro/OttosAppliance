@@ -24,7 +24,7 @@
         <td><%= link_to raw("<span class=\"glyphicon glyphicon-edit\"></span> Edit"), edit_invoice_path(invoice.id),
             class: "btn btn-default" %>
         </td>
-        <td><%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> Delete"), invoices_path(invoice.id),
+        <td><%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> Delete"), invoice_path(invoice.id),
             method: :delete, 'data-confirm'=>'Are you sure?', class: "btn btn-default" %>
         </td>
       </tr>

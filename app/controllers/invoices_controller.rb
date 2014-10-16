@@ -9,7 +9,29 @@ class InvoicesController < ApplicationController
   end
 
   def create
-    @invoice = Invoice.create invoice_params
+    @invoice = Invoice.new invoice_params
+
+    if @invoice.save
+      flash[:success] = "You have successfully saved an invoice!"
+      redirect_to invoices_path
+    else
+      render :new
+    end
+
+  end
+
+  def edit
+    @invoice = Invoice.find (params[:id])
+  end
+
+  def update
+    @invoice = Invoice.find params[:id]
+    if @invoice.update_attributes(invoice_params)
+      flash[:success] = "Invoice updated successfully!"
+      redirect_to invoices_path
+    else
+      render :edit
+    end
   end
 
   def search
@@ -18,7 +40,7 @@ class InvoicesController < ApplicationController
   def destroy
     @invoice = Invoice.find(params[:id]).destroy
     flash[:success] = "Invoice destroyed successfully."
-    redirect_to invoice_path
+    redirect_to invoices_path
   end
 
   private
