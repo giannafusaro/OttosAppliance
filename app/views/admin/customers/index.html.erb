@@ -1,0 +1,45 @@
+<%= (render partial: '/layouts/errors', formats: [:html], locals: { klass: @customer }) if @customer %>
+
+<h1> Customers </h1>
+
+<%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> Create New Customer"), new_admin_customer_path,
+    class: "btn btn-default btn-lg" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Street Address</th>
+      <th>City</th>
+      <th>Zip Code</th>
+      <th>Phone Number</th>
+      <th>Notes</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.first_name %></td>
+        <td><%= customer.last_name %></td>
+        <td><%= customer.street_address %></td>
+        <td><%= customer.city %></td>
+        <td><%= customer.zip_code %></td>
+        <td><%= customer.phone %></td>
+        <td><%= customer.notes %></td>
+        <td>
+            <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> View"), admin_customer_path(customer.id),
+            class: "btn btn-default" %>
+
+            <%= link_to raw("<span class=\"glyphicon glyphicon-edit\"></span> Edit"), edit_admin_customer_path(customer.id),
+            class: "btn btn-default" %>
+
+            <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> Delete"), admin_customer_path(customer.id),
+            method: :delete, 'data-confirm'=>'Are you sure?', class: "btn btn-default" %>
+        </td>
+    <% end %>
+  </tbody>
+</table>
