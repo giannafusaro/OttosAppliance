@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "You have to log in, cowboy."
       session[:user_requested_url] = request.url unless request.xhr?
       session[:user_id] = nil
-      redirect_to login_path and return false
+      redirect_to admin_login_path and return false
     end
   end
 

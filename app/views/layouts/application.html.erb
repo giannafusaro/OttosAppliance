@@ -13,7 +13,11 @@
     <div class="navbar navbar-inverse navbar-fixed-top custom-nav" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to "Otto's Appliance Service", dashboard_path, class: "navbar-brand" %>
+            <% if current_user %>
+              <%= link_to "Otto's Appliance Service", admin_dashboard_path, class: "navbar-brand" %>
+            <% else %>
+              <%= link_to "Otto's Appliance Service", site_path, class: "navbar-brand" %>
+            <% end %>
           <!-- <a class="navbar-brand" href="#">Otto's Appliance Service</a> -->
         </div>
         <% if current_user %>
@@ -22,31 +26,48 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Invoices <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Invoice"), new_invoice_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Invoices"), search_invoices_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Invoices"), invoices_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Invoice"), new_admin_invoice_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Invoices"), admin_search_invoices_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Invoices"), admin_invoices_path %></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customers <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Customer"), new_customer_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Customers"), search_customers_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Customers"), customers_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Customer"), new_admin_customer_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Customers"), admin_search_customers_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Customers"), admin_customers_path %></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admins <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Admin"), new_admin_user_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Admins"), admin_users_path %></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CMS <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Admin"), new_admin_customer_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Customers"), admin_search_customers_path %></li>
+                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Customers"), admin_customers_path %></li>
                 </ul>
               </li>
             </ul>
-            <div class="navbar-brand-right">
-              <span class="glyphicon glyphicon-cog"></span>  <%= current_user.name%>
-              <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li role="presentation" class="dropdown-header">Settings</li>
-                <li><a href="#users"><span class="glyphicon glyphicon-user"/>  Accounts</a></li>
-                <li><%= link_to "Logout", logout_path %></li>
-              </ul>
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle username" data-toggle="dropdown"><span class="glyphicon fa fa-cog"></span><span class="username"><%= current_user.name %></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Accounts</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><%= link_to "Logout", admin_logout_path %></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-
-
         <% end %>
       </div>
     </div>
