@@ -54,20 +54,27 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'dashboard#index', as: :dashboard
+  root 'site#index', as: :site
 
-  match '/login' => 'users#login', as: :login, via: [ :get, :post ]
 
-  get '/invoices/search' => 'invoices#search', as: :search_invoices
 
-  get '/customers/search' => 'customers#search', as: :search_customers
 
-  get '/logout' =>'users#logout', as: :logout
+  namespace :admin do
+    get '/dashboard' => 'dashboard#index', as: :dashboard
 
-  resources :users
+    match '/' => 'users#login', as: :login, via: [ :get, :post ]
 
-  resources :invoices
+    get '/invoices/search' => 'invoices#search', as: :search_invoices
 
-  resources :customers
+    get '/customers/search' => 'customers#search', as: :search_customers
+
+    get '/logout' =>'users#logout', as: :logout
+
+    resources :users
+    resources :invoices
+    resources :customers
+    resources :pages
+  end
+
 
 end
