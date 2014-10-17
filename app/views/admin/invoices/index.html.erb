@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Invoices</h1>
+
+  <%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> Create New Invoice"), new_admin_invoice_path,
+      class: "btn btn-default btn-lg" %>
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Invoice Number</th>
+        <th>Date</th>
+        <th>Address</th>
+        <th>Amount</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.invoice_number %></td>
+        <td><%= invoice.date %></td>
+        <td><%= invoice.address %></td>
+        <td><%= invoice.total %></td>
+        <td>
+            <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> View"), admin_invoice_path(invoice.id),
+            class: "btn btn-default" %>
+
+            <%= link_to raw("<span class=\"glyphicon glyphicon-edit\"></span> Edit"), edit_admin_invoice_path(invoice.id),
+            class: "btn btn-default" %>
+
+            <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> Delete"), admin_invoice_path(invoice.id),
+            method: :delete, 'data-confirm'=>'Are you sure?', class: "btn btn-default" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
