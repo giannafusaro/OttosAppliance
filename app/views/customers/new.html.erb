@@ -3,12 +3,7 @@
 <div class="container">
 
   <h1> New Customer </h1>
-
-  <div class="panel panel customer-info">
-    <div class="panel-heading customer-info">Customer Information</div>
-      <div class="panel-body customer-info">
         <%= form_for @customer do |f| %>
-
           <div class="form-group">
             <%= f.label :first_name %>
             <%= f.text_field :first_name, class: 'form-control' %>
@@ -41,15 +36,11 @@
 
           <div class="form-group">
             <%= f.label :notes %>
-            <%= f.text_field :notes, class: 'form-control' %>
+            <%= f.text_area :notes, class: 'form-control' %>
           </div>
 
           <%= f.submit 'Create Customer', class: 'btn btn-primary' %>
 
         <% end %>
-
-
-      </div>
-  </div>
 
 </div>

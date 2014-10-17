@@ -5,6 +5,8 @@ section {
 
 body {
   padding-top: 50px;
+  background-color: #F7EFFA;
+  margin-bottom: 20px;
 }
 
 .flash {
@@ -18,6 +20,7 @@ body {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.9),0 1px 2px rgba(0,0,0,0.4);
   color: #000;
   padding-right: 5px;
+  font-family: 'Arvo', serif;
 }
 
 .alert-error h4 {
@@ -30,14 +33,36 @@ body {
 
 
 .form-group {
+  font-family: 'Arvo', serif;
+  display: block;
   input[type="text"], input[type="password"], textarea {
     max-width: 400px;
   }
 }
 
+a.navbar-brand {
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+}
+
+a.dropdown-toggle {
+  margin-top: 6px;
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+}
+
+li {
+  font-size: 15px;
+  font-family: 'Arvo', serif;
+
+}
+
 .navbar-brand-right {
-  float:right;
-  padding-top:8px;
+  float: right;
+  margin-top: 22px;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
 }
 
 .inside-list-group {
@@ -46,7 +71,23 @@ body {
 
 .list-group-item {
   width: 400px;
+  font-family: 'Arvo', serif;
   .btn-primary {
     align: center;
   }
+}
+
+div.custom-nav {
+color: #fff;
+border-style: none;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: 'Arvo', serif;
+}
+
+span.glyphicon {
+  color: #FF0066;
 }
