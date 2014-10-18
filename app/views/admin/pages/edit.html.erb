@@ -1,0 +1,9 @@
+<h1>Edit <%= @page.name.titleize %></h1>
+
+<%= form_tag admin_cms_update_path(@page.name) do %>
+
+  <%= render partial: @page.name.gsub('-','_'), formats: [:html] %>
+
+  <%= submit_tag 'Save Changes', name: 'save', class: 'btn btn-primary' %>
+  <%= submit_tag 'Preview', name: 'preview', class: 'btn btn-default' %>
+<% end %>
