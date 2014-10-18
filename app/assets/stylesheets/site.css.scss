@@ -1,3 +1,100 @@
 // Place all the styles related to the Site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#google-map {
+  height: 500px;
+  display: block;
+}
+
+div.video-home {
+  margin-left: 240px;
+  margin-top: 50px;
+}
+
+#starting-location {
+  width:400px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+#get-directions-button {
+  display: inline;
+  font-family: 'Arvo', serif;
+  margin-left: 10px;
+
+}
+
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 320px;
+  padding-right: 320px;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* additional sections */
+#home {
+  background: url(http://i33.photobucket.com/albums/d80/dazedandconfused389/2713a651-a762-4cc9-8bc1-afc5fbec8110.png) no-repeat center center fixed;
+  display: table;
+  height: 500px;
+  position: relative;
+  width: 1280px;
+  left: -80px;
+  -webkit-background-size: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: solid .2px #000;
+}
+
+div.h1-wrapper {
+  padding: 16px 0px 23px 29px;
+  border-radius: 40px;
+  background-color: rgba(66, 12, 12, 0.78);
+  margin-top: 70px;
+  color: #FFFFFF;
+}
+
+#blah{
+  text-align: center;
+  color: #c1c1c1;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 150;
+  height: 100%;
+  width: 100%;
+  background-image: url("http://fc01.deviantart.net/fs29/f/2008/094/0/5/Jungle_Walkway_2_by_RaeyenIrael_Stock.jpg");
+  background-repeat: no-repeat;
+  background-position: -40px -40px;
+  background-size: 2000px;
+}
+
+
+text{
+  line-height: 300px;
+  font-size: 36pt;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
+}
