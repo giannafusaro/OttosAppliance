@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Cantata+One|Arvo|Syncopate|Montserrat+Alternates|Josefin+Sans|Crete+Round|Gloria+Hallelujah|Exo|Righteous|Allerta|Karla|Oxygen|Montserrat|Exo+2|Abril+Fatface|Handlee|Vidaloka|Rock+Salt|Merriweather+Sans|Varela+Round' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -68,16 +69,30 @@
               </li>
             </ul>
           </div>
+          <% else %>
+            <div class="collapse navbar-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li><%= link_to "About", about_path, class: "navbar-brand" %></li>
+                <li><%= link_to "Services", services_path, class: "navbar-brand" %></li>
+                <li><%= link_to "Contact Us", contact_us_path, class: "navbar-brand" %></li>
+                <li><%= link_to "Directions", directions_path, class: "navbar-brand" %></li>
+              </ul>
+            </div>
+
         <% end %>
       </div>
     </div>
 
     <%= render "layouts/flash_messages" %>
 
-    <div class="container">
+
+
+    <div class="container" id="body-container">
       <%= yield %>
     </div>
   </body>
 
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="//vjs.zencdn.net/4.9/video.js"></script>
+  <script src="//maps.google.com/maps/api/js?sensor=true"></script>
 </html>

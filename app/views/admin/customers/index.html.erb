@@ -31,7 +31,7 @@
         <td><%= customer.phone %></td>
         <td><%= customer.notes %></td>
         <td>
-            <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span> View"), admin_customer_path(customer.id),
+            <%= link_to raw("<span class=\"glyphicon fa fa-eye\"></span> View"), admin_customer_path(customer.id),
             class: "btn btn-default" %>
 
             <%= link_to raw("<span class=\"glyphicon glyphicon-edit\"></span> Edit"), edit_admin_customer_path(customer.id),

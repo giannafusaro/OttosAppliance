@@ -54,12 +54,21 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'site#index', as: :site
+  root 'site#home', as: :site
 
+
+  get '/about' => 'site#about', as: :about
+  get '/services' => 'site#services', as: :services
+  get '/contact-us' => 'site#contact_us', as: :contact_us
+  get '/directions' => 'site#directions', as: :directions
 
 
 
   namespace :admin do
+    get  'cms/:page' => 'pages#edit', as: :cms
+
+    post 'cms/:page' => 'pages#update', as: :cms_update
+
     get '/dashboard' => 'dashboard#index', as: :dashboard
 
     match '/' => 'users#login', as: :login, via: [ :get, :post ]
