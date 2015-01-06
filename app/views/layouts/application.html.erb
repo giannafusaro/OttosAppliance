@@ -1,98 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ottos Appliance Service</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Cantata+One|Arvo|Syncopate|Montserrat+Alternates|Josefin+Sans|Crete+Round|Gloria+Hallelujah|Exo|Righteous|Allerta|Karla|Oxygen|Montserrat|Exo+2|Abril+Fatface|Handlee|Vidaloka|Rock+Salt|Merriweather+Sans|Varela+Round' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top custom-nav" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-            <% if current_user %>
-              <%= link_to "Otto's Appliance Service", admin_dashboard_path, class: "navbar-brand" %>
-            <% else %>
-              <%= link_to "Otto's Appliance Service", site_path, class: "navbar-brand" %>
-            <% end %>
-          <!-- <a class="navbar-brand" href="#">Otto's Appliance Service</a> -->
-        </div>
+<head>
+  <title>Ottos Appliance Service, Inc.</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container" id="body-container">
+    <div class="header">
+      <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
         <% if current_user %>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Invoices <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Invoice"), new_admin_invoice_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Invoices"), admin_search_invoices_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Invoices"), admin_invoices_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customers <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Customer"), new_admin_customer_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Customers"), admin_search_customers_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Customers"), admin_customers_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admins <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Admin"), new_admin_user_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Admins"), admin_users_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CMS <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-plus\"></span> New Admin"), new_admin_customer_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-search\"></span> Search Customers"), admin_search_customers_path %></li>
-                  <li><%= link_to raw("<span class=\"glyphicon glyphicon-list-alt\"></span> View All Customers"), admin_customers_path %></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle username" data-toggle="dropdown"><span class="glyphicon fa fa-cog"></span><span class="username"><%= current_user.name %></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Accounts</a></li>
-                  <li><a href="#">Settings</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><%= link_to "Logout", admin_logout_path %></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <% else %>
-            <div class="collapse navbar-collapse pull-right">
-              <ul class="nav navbar-nav">
-                <li><%= link_to "About", about_path, class: "navbar-brand" %></li>
-                <li><%= link_to "Services", services_path, class: "navbar-brand" %></li>
-                <li><%= link_to "Contact Us", contact_us_path, class: "navbar-brand" %></li>
-                <li><%= link_to "Directions", directions_path, class: "navbar-brand" %></li>
-              </ul>
-            </div>
-
+        <%= link_to "Otto's Appliance Service, Inc.", admin_dashboard_path, class: "pure-menu-heading" %>
+        <% else %>
+        <%= link_to "Otto's Appliance Service, Inc.", site_path, class: "pure-menu-heading" %>
         <% end %>
+        <ul>
+          <li class="pure-menu-selected"><%= link_to "About", site_path %></li>
+          <li> <%= link_to "Services", services_path %></li>
+          <li> <%= link_to "Contact Us", contact_us_path %></li>
+          <li> <%= link_to "Directions", directions_path %></li>
+        </ul>
       </div>
     </div>
+
 
     <%= render "layouts/flash_messages" %>
 
 
+    <%= yield %>
+    <div class="push"></div>
+  </div>
 
-    <div class="container" id="body-container">
-      <%= yield %>
-    </div>
-  </body>
+  <div class="footer l-box is-center">
+    &copy;Otto's Appliance, Inc. All rights reserved.
+  </div>
+</body>
 
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="//vjs.zencdn.net/4.9/video.js"></script>
-  <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//vjs.zencdn.net/4.9/video.js"></script>
+<script src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 </html>
