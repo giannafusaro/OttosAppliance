@@ -12,18 +12,28 @@
 /////////// home page ///////////////////
 ///////////////////////////////////////
 
+.splash-subhead.subhead {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 .brand-title {
   width: 100%;
   text-align: center;
+  font-family: Arvo;
 
 }
 
 .brand {
-  padding: 10px;
+  padding: 5px;
+  -webkit-filter: invert(30%);
+}
+
+.brand:hover {
+  -webkit-filter: grayscale(100%);
 }
 
 .brand-images {
   width: 100%;
+
 }
 .content.video {
   padding-bottom: 45px;
@@ -87,6 +97,25 @@
   padding-top: 10px;
 }
 
+
+/////////////////////////////////////////
+/////////// about page ///////////////
+///////////////////////////////////////
+
+.stitched {
+  padding: 20px;
+  margin: 10px;
+  background: #ff0030;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px #aa3030;
+  font-weight: normal;
+}
 
 /////////////////////////////////////////
 /////////// services page ///////////////
@@ -285,13 +314,10 @@ a.pure-button-primary {
 */
 
 .splash-container {
-  background-image: url("https://s3-us-west-1.amazonaws.com/ottos-appliance/ottos2.jpg");
+  background-image: url(asset-path("ottos.jpg"));
   background-repeat: no-repeat;
   background-position:center center;
-  -o-background-size: 100% 100%, auto;
-  -moz-background-size: 100% 100%, auto;
-  -webkit-background-size: 100% 100%, auto;
-  background-size: 100% 100%, auto;
+  background-size: 1440px;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -300,7 +326,10 @@ a.pure-button-primary {
   top: 0;
   left: 0;
   position: fixed !important;
+
 }
+
+
 
 .splash {
   /* absolute center .splash within .splash-container */
