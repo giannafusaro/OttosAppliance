@@ -29,9 +29,9 @@
       </div>
       <div class="r-box pure-u-1-3">
         <div class="ottos-info">
-          <header class="ottos-info-header">
-            <h2 class="ottos-info-h2">Otto's Appliance Service</h2>
-          </header>
+
+          <h2 class="content-subhead">Otto's Appliance Service</h2>
+
           <div class="hours">
             <strong>Hours</strong>: 8am - 5pm, Monday - Friday
             (Closed 12-1pm)
@@ -56,28 +56,39 @@
       </div>
     </div>
   </div>
-  <div class="ribbon l-box-lrg pure-g">
+  <section class="ribbon l-box-lrg pure-g brand-images">
 
     <h2 class="content-head content-head-ribbon brand-title">Brands We Service</h2>
 
-
-    <div class="ribbon l-box-lrg pure-g brand-images">
-
-      <div class="pure-u-1-7 pure-u-lg-1-7">
-        <%= image_tag  "Thermador.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "Bosch.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "Insinkerator.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "Kitchenaid.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "Whirlpool.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "GE_Appliances.png", class: "pure-img-responsive brand" %>
-        <%= image_tag  "Maytag.png", class: "pure-img-responsive brand" %>
-      </div>
-
-
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Thermador.png", class: "pure-img-responsive brand" %>
     </div>
 
-  </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Bosch.png", class: "pure-img-responsive brand" %>
+    </div>
+
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Insinkerator.png", class: "pure-img-responsive brand" %>
+    </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Kitchenaid.png", class: "pure-img-responsive brand" %>
+    </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Maytag.png", class: "pure-img-responsive brand" %>
+    </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "GE_Appliances.png", class: "pure-img-responsive brand" %>
+    </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Kenmore.png", class: "pure-img-responsive brand" %>
+    </div>
+    <div class="pure-u-1-4 is-center">
+      <%= image_tag  "Whirlpool.png", class: "pure-img-responsive brand" %>
+    </div>
+
+  </section>
   <div class="footer l-box is-center">
-    &copy;Otto's Appliance, Inc. All rights reserved.
+    &copy;<%= Time.now.year %> Otto's Appliance, Inc. All rights reserved.
   </div>
 </div>
