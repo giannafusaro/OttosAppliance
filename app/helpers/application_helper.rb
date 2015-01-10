@@ -18,4 +18,8 @@ def flash_class(level)
     end
 end
 
+def is_page?(name)
+  controller.action_name == name
+end
+
 end
