@@ -12,27 +12,58 @@
 /////////// home page ///////////////////
 ///////////////////////////////////////
 
+
+
 .splash-subhead.subhead {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .brand-title {
   width: 100%;
   text-align: center;
-  font-family: Arvo;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
 
 }
 
 .brand {
-  padding: 5px;
-  -webkit-filter: invert(30%);
+
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:first-of-type {
+    padding-left: 0px;
+  }
+  &:last-of-type {
+    padding-right: 0px;
+  }
 }
 
-.brand:hover {
-  -webkit-filter: grayscale(100%);
+ul.brands {
+  height: 100%;
+  li {
+    padding: 5px 0px;
+    height: 60px;
+  }
 }
 
 .brand-images {
-  width: 100%;
+  .is-center {
+    height: 75px;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 
 }
 .content.video {
@@ -44,8 +75,19 @@
 }
 
 .contact-td {
+
+  font-family: 'Open Sans', serif;
   border: none !important;
   border-left: none;
+  &:last-of-type {
+    font-size: 20px;
+  }
+  i {
+    color: #C0392B;
+    &:last-of-type {
+      padding-left: 10px;
+    }
+  }
 }
 
 .contact-info {
@@ -53,54 +95,111 @@
   border: none;
 }
 
+.ottos-info {
+  h2 {
+    color: #34495e;
+    line-height: 45px;
+    position: relative;
+    text-align: center;
+    border-top: 2px solid #C0392B;
+    border-bottom: 2px solid #C0392B;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background-color: #34495e;
+      left: 0px;
+      height: 2px;
+    }
+    &:before {
+      top: -7px;
 
-.ottos-info-header {
-  margin-bottom: 5em;
-  padding-top: 1em;
-  position: relative;
-  text-align: center;
-  letter-spacing: 0.2em;
-  margin: 0;
+    }
+    &:after {
+      bottom: -7px;
+    }
+  }
 }
 
-.ottos-info-h2::before, .ottos-info-h2::after {
-  content: '';
-  height: 7px;
-  position: absolute;
-  top: 1.75em;
-  width: 43%;
-  display: block;
-}
 
-.ottos-info-h2:before {
-  left: 0;
-  border-bottom: solid 2px;
-  left: 0;
-  top: -12px;
-  width: 100%;
-}
 
-.ottos-info-h2:after {
-  right: 0;
-  border-top: solid 2px;
-  width: 100%;
-  margin-bottom: 2px;
-  top: 51px;
-}
 
-.ottos-info-h2 {
-  position: relative;
-  margin-bottom: 0;
-  border-top: solid 2px;
-  border-bottom: solid 2px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
 
 
 /////////////////////////////////////////
 /////////// about page ///////////////
 ///////////////////////////////////////
+
+/* Gradient transparent - color - transparent */
+
+.divider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.yelp-link {
+    text-decoration: none;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.yelp-link:hover {
+  color: #E6050B;
+}
+
+.info-contents {
+  display: inline-block;
+}
+
+
+.reviews {
+  height: 100%;
+  padding: 10px
+}
+
+.reviewer-name {
+  display: inline;
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.reviewer-name:hover {
+  color: #6C7A89;
+}
+
+.fa-star {
+  background-color: #E6050B;
+  color: #ffffff;
+  margin: 3px 4px 0px 0px;
+  font-size: 15px !important;
+  border-radius: 5px;
+  padding: 3px;
+  border: solid 1px;
+}
+
+.review-rating {
+  float: right;
+
+}
+
+.review-date {
+  float: right;
+  font-style: italic;
+  display: inline;
+}
+
+.reviewer-location {
+  font-size: 15px;
+  color: #000000;
+  display: block;
+}
+
+.reviewer-picture {
+  float: left;
+  margin-right: 10px;
+}
 
 .stitched {
   padding: 20px;
@@ -120,6 +219,91 @@
 /////////////////////////////////////////
 /////////// services page ///////////////
 ///////////////////////////////////////
+
+body.layout-services {
+  .brand {
+    opacity: .5;
+    &.auth {
+      opacity: .7;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h2 {
+    color: #4E4B5E;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    color: #C0392B;;
+  }
+
+  ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  div.pure-g {
+    margin-bottom: 50px;
+  }
+}
+
+.footer-brands {
+  bottom: 0px;
+  color: #674172;
+  opacity: 0.7;
+  font-size: 20px;
+  margin: 30px 0px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.services {
+  border: solid 1px black;
+}
+
+.service-icon {
+  padding: 25px 0px 0px 0px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: #4E4B5E;
+  font-size: 50px !important;
+  margin: 35px 0px 15px 0px;
+}
+
+.service-icon.brands {
+  background-color:rgba(224, 130, 131, 0.71);
+}
+
+.service-icon.appliance {
+  background-color: rgba(235, 151, 78,0.71);
+}
+
+.location {
+  background-color: rgba(103, 128, 159, 0.71);
+
+}
+
+.divider-services {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.left-container-services {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.right-container-services {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /////////////////////////////////////////
 /////////// contact page ////////////////
@@ -190,6 +374,7 @@ body {
   line-height: 1.7em;
   color: #7f8c8d;
   font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 html,body {
@@ -273,6 +458,7 @@ a.pure-button-primary {
 */
 
 .home-menu {
+  font-family: 'Open Sans', sans-serif;
   padding: 0.5em;
   text-align: center;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
@@ -291,6 +477,7 @@ a.pure-button-primary {
   color: white;
   font-weight: 400;
   font-size: 120%;
+  font-family: 'Open Sans', serif;
 }
 
 .home-menu .pure-menu-selected a {
@@ -298,7 +485,7 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-  color: #6FBEF3;
+  color: #1BA39C;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -316,13 +503,13 @@ a.pure-button-primary {
 .splash-container {
   background-image: url(asset-path("ottos.jpg"));
   background-repeat: no-repeat;
-  background-position:center center;
+  background-position:top center;
   background-size: 1440px;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
   width: 100%;
-  height: 88%;
+  height: 100%;
   top: 0;
   left: 0;
   position: fixed !important;
@@ -333,33 +520,39 @@ a.pure-button-primary {
 
 .splash {
   /* absolute center .splash within .splash-container */
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: absolute;
-  top: 100px; left: 0; bottom: 0; right: 0;
+  top: 328px; left: 0; bottom: 0; right: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 4em;
   color: white;
-  border: 3px solid white;
-  padding: 1em 1.6em;
-  font-weight: 100;
+  padding: .1em 1.6em;
+  font-weight: 700;
   border-radius: 5px;
   line-height: 1em;
-  background-color: rgba(45, 62, 80, .5)
+  font-family: 'Bitter', serif;
+  text-shadow: 0 0 20px #2d3a4a;
+  letter-spacing: 6px;
 }
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
+  font-size: 20px;
   color: white;
   letter-spacing: 0.05em;
-  opacity: 0.8;
+  opacity: 1;
+  font-family: 'Bitter', serif;
+  font-weight: normal;
+  text-shadow: 0 0 20px #2d3a4a;
+  top: -20px;
+  position: relative;
 }
 
 /*
@@ -369,7 +562,7 @@ a.pure-button-primary {
 .content-wrapper {
   /* These styles are required for the "scroll-over" effect */
   position: absolute;
-  top: 87%;
+  top: 585px;
   width: 100%;
   min-height: 12%;
   z-index: 2;
@@ -384,6 +577,8 @@ a.pure-button-primary {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 2em 0 1em;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -393,7 +588,12 @@ a.pure-button-primary {
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-  color: #1f8dd6;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  color: #1BA39C;
+  .services-title {
+    color: #4E4B5E !important;
+  }
 }
 .content-subhead i {
   margin-right: 7px;
@@ -443,8 +643,8 @@ a.pure-button-primary {
 /* We decrease the width of the .splash, since we have more width
 to work with */
 .splash {
-  width: 50%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 .splash-head {
