@@ -1,30 +1,16 @@
-
-section {
-  margin-top: 50px;
-
-}
-
-#body-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
 body {
   padding-top: 50px;
-  background-color: #F7EFFA;
-  margin-bottom: 20px;
 
 }
 
 .flash {
   z-index: 999999;
-  width:500px;
+  width: 500px;
   margin-top: 20px;
-  margin-left:-250px;
-  left:50%;
-  position:absolute;
-  text-align:center;
+  margin-left: -250px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.9),0 1px 2px rgba(0,0,0,0.4);
   color: #000;
   padding-right: 5px;
@@ -32,78 +18,9 @@ body {
 }
 
 .alert-error h4 {
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .field_with_errors input, .field_with_errors textarea {
-  border:1px solid #b94a48;
-}
-
-.container {
-  font-family: 'Arvo', serif;
-}
-
-.form-group {
-  font-family: 'Arvo', serif;
-  display: block;
-  input[type="text"], input[type="password"], textarea {
-    max-width: 400px;
-  }
-}
-
-a.navbar-brand {
-  margin-top: 10px;
-  font-size: 20px;
-  font-family: 'Arvo', serif;
-}
-
-a.dropdown-toggle {
-  color: #fff;
-  margin-top: 6px;
-  font-size: 18px;
-  font-family: 'Arvo', serif;
-}
-span.username {
-  color: #fff;
-  margin-bottom: 0px;
-}
-
-li {
-  font-size: 15px;
-  font-family: 'Arvo', serif;
-}
-
-.navbar-brand-right {
-  float: right;
-  margin-top: 22px;
-  font-family: 'Arvo', serif;
-  font-size: 18px;
-}
-
-.inside-list-group {
-  float: center;
-}
-
-.list-group-item {
-  width: 400px;
-  font-family: 'Arvo', serif;
-  .btn-primary {
-    align: center;
-  }
-}
-
-div.custom-nav {
-height:65px;
-border-style: none;
-}
-
-h1 {
-  margin: 50px 0px 30px 0px;
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Arvo', serif;
-}
-
-span.glyphicon {
-  color: #FF0066;
+  border: 1px solid #b94a48;
 }
