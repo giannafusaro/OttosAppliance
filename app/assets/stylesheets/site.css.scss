@@ -15,7 +15,7 @@
 
 
 .splash-subhead.subhead {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  top: -30px;
 }
 .brand-title {
   width: 100%;
@@ -26,13 +26,10 @@
 }
 
 .brand {
-
   opacity: 0.3;
-
   &:hover {
     opacity: 1;
   }
-
   &:first-of-type {
     padding-left: 0px;
   }
@@ -71,7 +68,17 @@ ul.brands {
 }
 
 .hours {
-  padding-top: 10px;
+  margin: 5px 0px;
+}
+
+body.layout-home{
+  tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #map-marker {
+    right: -8px;
+    position: relative;
+  }
 }
 
 .contact-td {
@@ -80,34 +87,35 @@ ul.brands {
   border: none !important;
   border-left: none;
   &:last-of-type {
-    font-size: 20px;
+    font-size: 16px;
+    color: #000;
   }
-  i {
-    color: #C0392B;
-    &:last-of-type {
-      padding-left: 10px;
-    }
-  }
+
 }
+
+
 
 .contact-info {
   border-collapse:collapse;
   border: none;
+  i {
+    color: #8c001a;
+  }
 }
 
 .ottos-info {
   h2 {
-    color: #34495e;
+    color: #000000;
     line-height: 45px;
     position: relative;
     text-align: center;
-    border-top: 2px solid #C0392B;
-    border-bottom: 2px solid #C0392B;
+    border-top: 2px solid #8c001a;
+    border-bottom: 2px solid #8c001a;
     &:before, &:after {
       content: '';
       position: absolute;
       width: 100%;
-      background-color: #34495e;
+      background-color: #000000;
       left: 0px;
       height: 2px;
     }
@@ -132,6 +140,11 @@ ul.brands {
 
 /* Gradient transparent - color - transparent */
 
+.pure-g {
+  div, p, span {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
 .divider {
   border: 0;
   height: 0;
@@ -146,7 +159,7 @@ ul.brands {
 }
 
 .yelp-link:hover {
-  color: #E6050B;
+  color: #8c001a;
 }
 
 .info-contents {
@@ -170,7 +183,7 @@ ul.brands {
 }
 
 .fa-star {
-  background-color: #E6050B;
+  background-color: #8c001a;
   color: #ffffff;
   margin: 3px 4px 0px 0px;
   font-size: 15px !important;
@@ -201,30 +214,15 @@ ul.brands {
   margin-right: 10px;
 }
 
-.stitched {
-  padding: 20px;
-  margin: 10px;
-  background: #ff0030;
-  color: #fff;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 1.3em;
-  border: 2px dashed #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  text-shadow: -1px -1px #aa3030;
-  font-weight: normal;
-}
-
 /////////////////////////////////////////
 /////////// services page ///////////////
 ///////////////////////////////////////
 
 body.layout-services {
   .brand {
-    opacity: .5;
+    opacity: .7;
     &.auth {
-      opacity: .7;
+      opacity: .8;
     }
     &:hover {
       opacity: 1;
@@ -236,15 +234,12 @@ body.layout-services {
     margin-bottom: 30px;
   }
 
-  h3 {
-    color: #C0392B;;
-  }
-
-  ul {
+  .services-content {
+    ul {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
     font-weight: 300;
   }
+}
 
   div.pure-g {
     margin-bottom: 50px;
@@ -253,8 +248,8 @@ body.layout-services {
 
 .footer-brands {
   bottom: 0px;
-  color: #674172;
-  opacity: 0.7;
+  color: #8c001a;
+  opacity: 0.8;
   font-size: 20px;
   margin: 30px 0px;
   &:hover {
@@ -309,28 +304,60 @@ body.layout-services {
 /////////// contact page ////////////////
 ///////////////////////////////////////
 
+
+#google-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 1px;
+}
+
+textarea {
+  width: 100%;
+  position: relative;
+  height: 200px;
+}
+
+.contact-info-box {
+  position: relative;
+
+}
+
+#map-marker {
+  position: relative;
+}
+
+body.layout-contact_us {
+  td {
+    letter-spacing: 1px;
+  }
+  #map-marker {
+    right: 0px;
+  }
+  i {
+    border-radius: 50%;
+    background:#8c001a;
+    color: #fff;
+    padding: 5px;
+    position: relative;
+    top: 1px;
+    width: 27px;
+    text-align: center;
+  }
+  .hours {
+    word-spacing: -2px;
+  }
+}
+
+
+
 /////////////////////////////////////////
 /////////// directions page /////////////
 ///////////////////////////////////////
-#google-map {
-  height: 500px;
-  display: block;
-  margin-bottom: 20px;
-}
 
 
 
-#starting-location {
-  width:400px;
-  margin-bottom: 10px;
-  float: left;
-}
 
-#get-directions-button {
-  display: inline;
-  font-family: 'Arvo', serif;
-  margin-left: 10px;
-}
 
 
 #body-container {
@@ -438,7 +465,7 @@ label {
 * I want my pure-button elements to look a little different
 */
 .pure-button {
-  background-color: #1f8dd6;
+  background-color: #8c001a;
   color: white;
   padding: 0.5em 2em;
   border-radius: 5px;
@@ -446,7 +473,7 @@ label {
 
 a.pure-button-primary {
   background: white;
-  color: #1f8dd6;
+  color: #8c001a;
   border-radius: 5px;
   font-size: 120%;
 }
@@ -485,13 +512,13 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-  color: #1BA39C;
+  color: #cbcbcb;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
   background: none;
   border: none;
-  color: #AECFE5;
+  color: #D24D57;
 }
 
 
@@ -579,6 +606,7 @@ a.pure-button-primary {
   margin: 2em 0 1em;
   font-family: 'Bitter', serif;
   font-weight: 700;
+
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -590,8 +618,8 @@ a.pure-button-primary {
 .content-subhead {
   font-family: 'Bitter', serif;
   font-weight: 700;
-  color: #1BA39C;
-  .services-title {
+  color: #8c001a;
+  h2 {
     color: #4E4B5E !important;
   }
 }
