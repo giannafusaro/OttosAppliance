@@ -31,24 +31,18 @@
       </div>
       <hr class="divider"/>
       <h4>Shoot us an email.</h4>
-      <form class="pure-form pure-form-stacked">
-        <fieldset>
-
-
-          <input id="name" type="text" placeholder="Name">
-
-
-          <input id="name" type="text" placeholder="Phone Number">
 
 
 
-          <input id="email" type="email" placeholder="Email">
 
-
-          <textarea id="email" type="email" placeholder="Enter your message..."></textarea>
-
-
-          <button type="submit" class="pure-button">Submit</button>
+          <%= form_tag(submit_email_path, method: "post", class: "pure-form pure-form-stacked") do %>
+            <fieldset>
+            <%= text_field_tag(:name, nil, placeholder: "Name" ) %>
+            <%= text_field_tag(:phone, nil, placeholder: "Phone Number") %>
+            <%= email_field(:email, nil, placeholder: "Email") %>
+            <%= text_area_tag(:message, nil, placeholder: "Enter your message...") %>
+            <%= submit_tag("Send", class: "send") %>
+          <% end %>
         </fieldset>
       </form>
     </div>

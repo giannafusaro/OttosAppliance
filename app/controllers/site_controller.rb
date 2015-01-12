@@ -16,8 +16,13 @@ def home
     @page = Page.find_by_name('contact-us')
   end
 
-  def directions
-    @page = Page.find_by_name('directions')
+  def submit_email
+
+    unless OttosMailer.customer_email(params[:name],params[:phone],params[:email],params[:message]).deliver
+      flash[:success] = "Problems sending mail. Please try again."
+    end
+    flash[:success] = "Email sent!"
+    redirect_to contact_us_path and return
   end
 
   def nope

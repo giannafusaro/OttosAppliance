@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   get '/about' => 'site#about', as: :about
   get '/services' => 'site#services', as: :services
   get '/contact-us' => 'site#contact_us', as: :contact_us
-  get '/directions' => 'site#directions', as: :directions
+  post '/submit-email' => 'site#submit_email', as: :submit_email
 
 
 
