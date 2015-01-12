@@ -1,5 +1,5 @@
 class OttosMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "services@ottosappliance.com"
 
   def customer_email (name, phone, email, message)
     @name = name
@@ -8,6 +8,6 @@ class OttosMailer < ActionMailer::Base
     @message = message
 
     recipients = ["services@ottosappliance.com", "tony@ottosappliance.com", "otto@ottosappliance.com", "angelo@ottosappliance.com"]
-    mail(to: recipients, subject: 'Testing')
+    mail(to: recipients, subject: 'New Message From Customer')
   end
 end
