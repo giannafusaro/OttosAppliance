@@ -47,6 +47,7 @@ ul.brands {
 }
 
 .brand-images {
+
   .is-center {
     height: 75px;
     &:before {
@@ -57,14 +58,13 @@ ul.brands {
       margin-right: -0.25em;
     }
     img {
+      max-width: 140px;
+      width: 100%;
       display: inline-block;
       vertical-align: middle;
     }
   }
 
-}
-.content.video {
-  padding-bottom: 45px;
 }
 
 .hours {
@@ -104,7 +104,9 @@ body.layout-home{
 }
 
 .ottos-info {
+  margin: 21px 30px;
   h2 {
+
     color: #000000;
     line-height: 45px;
     position: relative;
@@ -229,6 +231,8 @@ body.layout-services {
     }
   }
 
+
+
   h2 {
     color: #4E4B5E;
     margin-bottom: 30px;
@@ -277,6 +281,35 @@ body.layout-services {
 
 .service-icon.appliance {
   background-color: rgba(235, 151, 78,0.71);
+}
+
+
+div.appliance {
+  img, li {
+    opacity: .9;
+    font-size: 20px;
+    color: #6C7A89;
+  }
+  li {
+
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+    li {
+      color:#26292D;
+    }
+
+  }
+}
+
+
+
+
+img.appliance {
+  margin: 15px 0px 5px 0px;
 }
 
 .location {
