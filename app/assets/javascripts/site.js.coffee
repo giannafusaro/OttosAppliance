@@ -40,6 +40,7 @@ $(document).ready ->
 
   # add information window
   infowindow = new google.maps.InfoWindow(content: "<div class=\"info\"><strong>Otto's Appliance Service Inc.</strong><br>1663 El Camino Real</div>")
+  infowindow.open map, marker1
   return
 
 return
