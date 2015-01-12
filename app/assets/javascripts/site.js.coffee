@@ -39,7 +39,7 @@ $(document).ready ->
 
 
   # add information window
-  infowindow = new google.maps.InfoWindow(content: "<div class=\"info\"><strong>Otto's Appliance Service Inc.</strong><br>1663 El Camino Real</div>")
+  infowindow = new google.maps.InfoWindow(content: "<div class=\"info\"><a href=\"https://www.google.com/maps/dir/''/otto's+appliance+service,+inc.,+el+camino+real,+millbrae,+ca/@37.613286,-122.4390378,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808f77777340c3f5:0x8e9e9781e1a01fb4!2m2!1d-122.404705!2d37.613291\"><strong>Otto's Appliance Service Inc.</strong></a><br>1663 El Camino Real</div>")
   infowindow.open map, marker1
   return
 
