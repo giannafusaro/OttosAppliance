@@ -42,6 +42,8 @@ gem 'yelp', require: 'yelp'
 
 gem 'pg'
 
+gem 'rails_12factor'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
