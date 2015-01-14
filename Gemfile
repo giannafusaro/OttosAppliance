@@ -40,6 +40,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use yelp api
 gem 'yelp', require: 'yelp'
 
+gem 'pg'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

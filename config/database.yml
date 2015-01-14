@@ -1,3 +1,4 @@
+
 development:
   adapter: mysql2
   database: ottos_appliance_development
@@ -6,12 +7,12 @@ development:
   host: localhost
   encoding: utf8
 
-staging:
-  adapter: mysql2
-  database: ottos_appliance_staging
-  username: root
-  password:
-  host: localhost
+production:
+  adapter: postgresql
+  database: d5beb45brdlps1
+  username: ozmskqnscuzvwq
+  password: _ueaMZ7KAbqAwLitbCTnSbfq6H
+  host: ec2-54-225-156-230.compute-1.amazonaws.com
   encoding: utf8
 
 test:
