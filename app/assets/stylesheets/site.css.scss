@@ -65,7 +65,7 @@ ul.brands {
     }
   }
 
-  padding-bottom: 2em !important;
+  padding-bottom: 2.2em !important;
 
 }
 
@@ -140,27 +140,42 @@ body.layout-home{
 
 
 article.testimonial {
+  box-shadow: 0 0 0 0px #ff0030, -1px 1px 10px 1px rgba(124, 124, 117, 0.5);
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1em 2em;
+    text-shadow: 1px 1px 0px #cdcdcd;
+
+  }
+
+  .author {
+    text-align: left;
+  }
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0em !important;
   background: #dedede;
   border-radius: 10px;
   padding: 20px;
-  width: 71%;
+  width: 80%;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 55px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 
 }
 
 .testimonial-arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-top: 41px;
   background: url(asset-path("left-message-arrow.png")) no-repeat scroll 0 0;
   float: left;
-  width: 12px;
-  height: 23px;
-  position: relative;
-  margin-top: 70px;
+  left: -26px;
 }
+
 
 .fa-quote-left {
   float: left;
@@ -180,6 +195,8 @@ article.testimonial {
 
 div.testimonial {
   padding: 15px;
+  position: relative;
+
 }
 
 
@@ -520,6 +537,7 @@ width: 80px;
 }
 
 .footer {
+
   padding: 2.5em;
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
@@ -695,8 +713,9 @@ a.pure-button-primary {
 */
 
 .splash-container {
-  background-image: url(asset-path("ottos.jpg"));
+  background-image: url(asset-path("ottos-triangulation-1.jpg"));
   background-repeat: no-repeat;
+  background-color: #07080b;
   background-position:top center;
   background-size: 1400px;
   z-index: 1;
@@ -807,8 +826,10 @@ a.pure-button-primary {
 }
 
 .footer-top {
-  border-top: 1px solid #DEDEDE;
-  background: none repeat scroll 0% 0% #F9F9F9;
+  border-top: 1px solid #D4D4D4;
+  background: none repeat scroll 0% 0% #fafafa;
+  background-image: linear-gradient(to bottom,#fafafa,#f2f2f2);
+  background-repeat: repeat-x;
 
   line-height: 2em;
 }
@@ -828,6 +849,15 @@ a.pure-button-primary {
 }
 
 @media (max-width: 767px) {
+
+  .to-hide {
+    display: none;
+  }
+
+  .about {
+
+    padding-right: 0px;
+  }
 
   .footer {
     ul {
