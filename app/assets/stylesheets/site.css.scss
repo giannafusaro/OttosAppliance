@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
 /////////////////////////////////////////
 /////////// master page /////////////////
 ///////////////////////////////////////
@@ -12,7 +11,9 @@
 /////////// home page ///////////////////
 ///////////////////////////////////////
 
-
+.vid {
+  padding: 0px;
+}
 
 .splash-subhead.subhead {
   top: -30px;
@@ -47,7 +48,6 @@ ul.brands {
 }
 
 .brand-images {
-
   .is-center {
     height: 75px;
     &:before {
@@ -65,15 +65,21 @@ ul.brands {
     }
   }
 
+  padding-bottom: 2em !important;
+
 }
 
 .hours {
-  margin: 5px 0px;
+  margin: 5px 3px 0px 3px;
+  line-height: 20px;
 }
 
 body.layout-home{
   tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:last-of-type {
+      border-bottom: none !important;
+    }
   }
   #map-marker {
     right: -8px;
@@ -104,7 +110,8 @@ body.layout-home{
 }
 
 .ottos-info {
-  margin: 21px 30px;
+  padding-top: 25px;
+  position: relative;
   h2 {
 
     color: #000000;
@@ -132,7 +139,48 @@ body.layout-home{
 }
 
 
+article.testimonial {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0em !important;
+  background: #dedede;
+  border-radius: 10px;
+  padding: 20px;
+  width: 71%;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 
+}
+
+.testimonial-arrow {
+  background: url(asset-path("left-message-arrow.png")) no-repeat scroll 0 0;
+  float: left;
+  width: 12px;
+  height: 23px;
+  position: relative;
+  margin-top: 70px;
+}
+
+.fa-quote-left {
+  float: left;
+}
+
+.fa-quote-right {
+  float: right;
+}
+
+.testimonials-container {
+  border-top: 1px solid #DEDEDE;
+  background: none repeat scroll 0% 0% #F9F9F9;
+  h2 {
+    width: 100%;
+  }
+}
+
+div.testimonial {
+  padding: 15px;
+}
 
 
 
@@ -141,6 +189,34 @@ body.layout-home{
 ///////////////////////////////////////
 
 /* Gradient transparent - color - transparent */
+
+.blurb {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  background: rgba(18, 21, 29, 0.85);
+  padding: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  z-index: 2;
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
+}
+
+.divider-about {
+  display: none;
+}
+
+.about {
+
+  padding-right: 15px;
+  p {
+    margin-right: 5px;
+  }
+}
+
 
 .pure-g {
   div, p, span {
@@ -231,23 +307,17 @@ body.layout-services {
     }
   }
 
-
-
   h2 {
     color: #4E4B5E;
     margin-bottom: 30px;
   }
 
   .services-content {
-    ul {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-  }
-}
-
-  div.pure-g {
-    margin-bottom: 50px;
-  }
+      ul {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      }
+    }
 }
 
 .footer-brands {
@@ -325,6 +395,7 @@ img.appliance {
 }
 
 .left-container-services {
+  margin-bottom: 30px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -344,7 +415,10 @@ img.appliance {
   border-radius: 10px;
   z-index: 1px;
 }
-
+div.info {
+  height: 50px;
+    width: 200px;
+}
 textarea {
   width: 100%;
   position: relative;
@@ -353,6 +427,9 @@ textarea {
 
 .contact-info-box {
   position: relative;
+  .ottos-info {
+    left: -35px !important;
+  }
 
 }
 
@@ -362,21 +439,22 @@ textarea {
 
 body.layout-contact_us {
   td {
-    letter-spacing: 1px;
+    padding: 10px 0px 10px 8px;
+    i {
+      border-radius: 50%;
+      background:#8c001a;
+      color: #fff;
+      padding: 5px;
+      position: relative;
+      top: 1px;
+      width: 27px;
+      text-align: center;
+    }
   }
   #map-marker {
     right: 0px;
   }
-  i {
-    border-radius: 50%;
-    background:#8c001a;
-    color: #fff;
-    padding: 5px;
-    position: relative;
-    top: 1px;
-    width: 27px;
-    text-align: center;
-  }
+
   .hours {
     word-spacing: -2px;
   }
@@ -384,7 +462,6 @@ body.layout-contact_us {
 
 body.layout-contact_us {
   .send {
-    width: 30% !important;
     background-color: #8c001a;
     color: white;
     padding: 0.5em 2em;
@@ -395,23 +472,68 @@ body.layout-contact_us {
 
 
 /////////////////////////////////////////
-/////////// directions page /////////////
+/////////// master page /////////////
 ///////////////////////////////////////
-
-
-
-
-
 
 #body-container {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto 2em;
+}
+a, li{
+  text-decoration: none !important;
+}
+li {
+  a.plain {
+    color: #6C7A89;
+  }
 }
 
-.footer, .push {
-  height: 4em;
+a {
+  color: #34495e;
+}
+
+h2 {
+
+  a.plain {
+    color: #34495e;
+  }
+
+}
+
+.col1 {
+  width: 134px;
+}
+
+.col2 {
+width: 80px;
+}
+
+.col3 {
+  width: 95px;
+  i {
+    padding: 3px;
+    font-size: 16px;
+    padding-right: 6px;
+  }
+}
+
+.footer {
+  padding: 2.5em;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  h4 {
+    margin: .7em 0em !important;
+  }
+  ul {
+    display: inline-block;
+  }
+  li {
+    text-align: left;
+  }
+
+
 }
 
 
@@ -475,8 +597,9 @@ label {
 }
 
 .l-box-lrg {
-  padding: 2em;
+  padding: 0.5em 1em;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+
 }
 
 .is-center {
@@ -552,6 +675,7 @@ a.pure-button-primary {
 
 .home-menu .pure-menu-selected a {
   color: white;
+  text-align: center;
 }
 
 .home-menu a {
@@ -574,7 +698,7 @@ a.pure-button-primary {
   background-image: url(asset-path("ottos.jpg"));
   background-repeat: no-repeat;
   background-position:top center;
-  background-size: 1440px;
+  background-size: 1400px;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -594,7 +718,8 @@ a.pure-button-primary {
   height: 100%;
   margin: auto;
   position: absolute;
-  top: 328px; left: 0; bottom: 0; right: 0;
+  padding-top: 165px;
+  left: 0; bottom: 0; right: 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -603,7 +728,6 @@ a.pure-button-primary {
 .splash-head {
   font-size: 4em;
   color: white;
-  padding: .1em 1.6em;
   font-weight: 700;
   border-radius: 5px;
   line-height: 1em;
@@ -632,12 +756,13 @@ a.pure-button-primary {
 .content-wrapper {
   /* These styles are required for the "scroll-over" effect */
   position: absolute;
-  top: 585px;
+  top: 565px;
   width: 100%;
   min-height: 12%;
   z-index: 2;
   background: white;
   right:0;
+  overflow-x: hidden;
 
 }
 
@@ -681,13 +806,96 @@ a.pure-button-primary {
   background: #111;
 }
 
+.footer-top {
+  border-top: 1px solid #DEDEDE;
+  background: none repeat scroll 0% 0% #F9F9F9;
+
+  line-height: 2em;
+}
+
+@media (max-width: 335px) {
+
+  .pure-menu li a {
+    padding: 5px 10px;
+  }
+  .splash-head {
+    font-size: 3.4em;
+  }
+
+  .l-box-lrg {
+    padding: 0.5em 0em 0.5em 0em !important;
+  }
+}
+
 @media (max-width: 767px) {
-  .pure-u-1 {
-    width: 100%;
-    .left-container-services {
-      border-right: none;
+
+  .footer {
+    ul {
+      width: initial;
+    }
+    li {
+      text-align: center;
     }
   }
+  .divider-about {
+    display: block;
+  }
+
+  #google-map {
+    height: 300px;
+  }
+  .review-content {
+    margin-top: 25px;
+  }
+
+  .fa-star {
+    margin: 3px 2px 0px 0px;
+  }
+
+  article.review {
+    position: relative;
+  }
+  .review-rating {
+    float: right;
+  }
+
+  .info-contents {
+    margin-top: 7px;
+  }
+
+  .reviewer-name {
+    font-size: 16px;
+  }
+
+  .reviewer-location {
+    font-size: 11px;
+  }
+  .review-date {
+    float: none;
+    position: absolute;
+    right: 4px;
+    top: 30px;
+  }
+  .splash-container {
+    height: 565px !important;
+    position: absolute !important;
+    background-position: 25% center !important;
+  }
+
+  .pure-u-1 {
+    width: 100%;
+  }
+  .left-container-services {
+    border-right: none;
+  }
+
+  .splash {
+    padding-top: 125px !important;
+  }
+  .splash-subhead.subhead {
+    top:  100px;
+  }
+
 }
 
 /*
@@ -722,9 +930,11 @@ a.pure-button-primary {
   height: 500px;
 }*/
 
+
 /* We decrease the width of the .splash, since we have more width
 to work with */
 .splash {
+
   width: 100%;
   height: 100%;
 }
