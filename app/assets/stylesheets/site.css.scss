@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
+
 /////////////////////////////////////////
 /////////// master page /////////////////
 ///////////////////////////////////////
@@ -18,6 +21,17 @@
 .alert-error {
   background: rgba(217, 30, 24, 0.51);
 }
+
+.scroll-top {
+  transition: all 0.5s ease;
+  background: rgba(45, 62, 80, 0) !important;
+  box-shadow: none !important;
+  a.pure-menu-heading {
+    display: none !important;
+  }
+}
+
+
 /////////////////////////////////////////
 /////////// home page ///////////////////
 ///////////////////////////////////////
@@ -217,13 +231,14 @@ div.testimonial {
 ///////////////////////////////////////
 
 /* Gradient transparent - color - transparent */
-
+.blurb-container {
+  width: 100%;
+}
 .blurb {
   font-family: 'Open Sans', sans-serif;
-  color: #fff;
   text-align: center;
   position: relative;
-  background: rgba(18, 21, 29, 0.85);
+  letter-spacing: 0px !important;
   padding: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -233,22 +248,49 @@ div.testimonial {
   }
 }
 
+.banner-container {
+  background-image: url(asset-path("golden-gate1.png")) !important;
+  background-repeat: no-repeat;
+  background-color: #07080b;
+  background-position:top center;
+  background-size: 1400px;
+  background-position-x: 70%;
+  background-position-y: 51%;
+  z-index: 1;
+  overflow: hidden;
+  /* The following styles are required for the "scroll-over" effect */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+
+}
+
 .divider-about {
   display: none;
 }
 
 .about {
 
-  padding-right: 15px;
+  padding: 30px;
   p {
-    margin-right: 5px;
+
   }
 }
+
 .about-g {
   padding: 1em;
 }
+.nanu {
+  width: 500px !important;
+}
 .about-picture {
-  display: block !important;
+
+  display: inline-block !important;
+  width: 300px;
+  border: 10px solid white;
+  margin: 10px;
 }
 .pure-g {
   div, p, span {
@@ -690,9 +732,10 @@ a.pure-button-primary {
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu.pure-menu-open {
-  background: #2d3e50;
+  background-color: rgba(45, 62, 80, 0.9);
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
+  transition: all 0.5s ease;
   /* Fixed menus normally have a border at the bottom. */
   border-bottom: none;
   /* I need a higher z-index here because of the scroll-over effect. */
@@ -703,7 +746,7 @@ a.pure-button-primary {
   color: white;
   font-weight: 400;
   font-size: 120%;
-  font-family: 'Open Sans', serif;
+  font-family: 'Bitter', serif;
 }
 
 .home-menu .pure-menu-selected a {
@@ -727,8 +770,9 @@ a.pure-button-primary {
 * This is the blue top section that appears on the page.
 */
 
-.splash-container {
-  background-image: url(asset-path("ottos-triangulation-1.jpg"));
+div.splash-container {
+
+  background-image: url(asset-path("ottos-new2.jpg")) !important;
   background-repeat: no-repeat;
   background-color: #07080b;
   background-position:top center;
@@ -851,6 +895,11 @@ a.pure-button-primary {
 
 @media (max-width: 335px) {
 
+  body.layout-contact_us {
+    .pure-g {
+        padding: 0px 10px;
+    }
+  }
   .pure-menu li a {
     padding: 5px 10px;
   }
