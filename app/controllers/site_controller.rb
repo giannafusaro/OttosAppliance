@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
 
-def home
+  def home
     @page = Page.find_by_name('home')
   end
 
@@ -14,6 +14,9 @@ def home
 
   def contact_us
     @page = Page.find_by_name('contact-us')
+  end
+
+  def test
   end
 
   def submit_email
