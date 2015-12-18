@@ -45,7 +45,7 @@ gem 'yelp', require: 'yelp'
 
 group :production do
   # Use Unicorn as the app server
-  gem 'pg'
+  gem 'unicorn'
 end
 
 gem 'rails_12factor'
