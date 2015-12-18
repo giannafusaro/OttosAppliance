@@ -1,5 +1,8 @@
 class OttosMailer < ActionMailer::Base
-  default from: "services@ottosappliance.com"
+  logger.debug "////////////////////////////////////////"
+  logger.debug "#{Rails.application.secrets.inspect}"
+  logger.debug "////////////////////////////////////////"
+  default from: Rails.application.secrets[:ottos_email]
 
   def customer_email (name, phone, email, message)
     @name = name
@@ -7,7 +10,6 @@ class OttosMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    recipients = ["services@ottosappliance.com", "tony@ottosappliance.com", "otto@ottosappliance.com", "angelo@ottosappliance.com"]
-    mail(to: recipients, subject: 'New Message From Customer')
+    mail(to: "ottos94030@gmail.com", subject: 'New Message From Customer')
   end
 end

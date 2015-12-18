@@ -2,32 +2,24 @@
  # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http: coffeescript.org/
 
+
+
 $(document).ready ->
-
-  ##########################
-  ####### Skrollr.js ########
-  ##########################
-  s = skrollr.init(render: (data) ->
-    #Debugging - Log the current scroll position.
-    #console.log(data.curTop);
-  )
-  console.log(s)
-  
-
 
   #########################################
   ######## Fixed Header ##################
   ########################################
 
   $(window).scroll ->
-    if $(this).scrollTop() > 529
+
+    if (($('body').hasClass('layout-services') or $('body').hasClass('layout-contact_us')) or $(this).scrollTop() > 529)
       $(".pure-menu-fixed").removeClass "scroll-top"
     else
       $(".pure-menu-fixed").addClass "scroll-top"
 
 
 
-  if $(this).scrollTop() > 529
+  if (($('body').hasClass('layout-services') or $('body').hasClass('layout-contact_us')) or $(this).scrollTop() > 529)
     $(".pure-menu-fixed").removeClass "scroll-top"
   else
     $(".pure-menu-fixed").addClass "scroll-top"

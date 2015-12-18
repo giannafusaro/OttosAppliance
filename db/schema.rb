@@ -13,52 +13,52 @@
 
 ActiveRecord::Schema.define(version: 20141017023637) do
 
-  create_table "customers", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "street_address"
-    t.string   "city"
-    t.string   "zip_code"
-    t.string   "phone"
-    t.text     "notes"
+  create_table "customers", force: :cascade do |t|
+    t.string   "first_name",     limit: 255
+    t.string   "last_name",      limit: 255
+    t.string   "street_address", limit: 255
+    t.string   "city",           limit: 255
+    t.string   "zip_code",       limit: 255
+    t.string   "phone",          limit: 255
+    t.text     "notes",          limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "invoices", force: true do |t|
-    t.string   "invoice_number"
+  create_table "invoices", force: :cascade do |t|
+    t.string   "invoice_number", limit: 255
     t.datetime "date"
-    t.string   "make"
-    t.string   "model"
-    t.string   "serial_number"
-    t.string   "street"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.text     "request"
-    t.text     "description"
-    t.text     "remarks"
-    t.decimal  "parts",          precision: 2, scale: 0
-    t.decimal  "tax",            precision: 2, scale: 0
-    t.decimal  "service_call",   precision: 2, scale: 0
-    t.decimal  "labor",          precision: 2, scale: 0
-    t.decimal  "total",          precision: 2, scale: 0
+    t.string   "make",           limit: 255
+    t.string   "model",          limit: 255
+    t.string   "serial_number",  limit: 255
+    t.string   "street",         limit: 255
+    t.string   "city",           limit: 255
+    t.string   "state",          limit: 255
+    t.string   "zip",            limit: 255
+    t.text     "request",        limit: 65535
+    t.text     "description",    limit: 65535
+    t.text     "remarks",        limit: 65535
+    t.decimal  "parts",                        precision: 2
+    t.decimal  "tax",                          precision: 2
+    t.decimal  "service_call",                 precision: 2
+    t.decimal  "labor",                        precision: 2
+    t.decimal  "total",                        precision: 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "customer_id"
+    t.integer  "customer_id",    limit: 4
   end
 
-  create_table "pages", force: true do |t|
-    t.string   "name"
-    t.text     "data"
+  create_table "pages", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "data",       limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

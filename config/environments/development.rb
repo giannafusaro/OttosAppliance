@@ -6,6 +6,8 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # config
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -40,9 +42,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'mysite.co',
-    :user_name            => 'services@ottosappliance.com',
-    :password             => 'ElC@m1n0!',
+    :domain               => 'ottosappliance.com',
+    :user_name            => Rails.application.secrets[:ottos_email],
+    :password             => Rails.application.secrets[:ottos_email_password],
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }

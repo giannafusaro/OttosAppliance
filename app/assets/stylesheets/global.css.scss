@@ -6,10 +6,10 @@ body {
 .flash {
   z-index: 999999;
   width: 500px;
-  margin-top: 20px;
+  margin-top: -55px;
   margin-left: -250px;
   left: 50%;
-  position: absolute;
+  position: fixed;
   text-align: center;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.9),0 1px 2px rgba(0,0,0,0.4);
   color: #000;

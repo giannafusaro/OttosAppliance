@@ -30,7 +30,7 @@ class SiteControllerTest < ActionController::TestCase
     cust_email = ActionMailer::Base.deliveries.last
 
     assert_equal "New Message From Customer", cust_email.subject
-    assert_equal 'services@ottosappliance.com', cust_email.to[0]
+    assert_equal "ottos94030@gmail.com", cust_email.to[0]
     assert_match(/Message From A Customer Via www.ottosappliance.com/, cust_email.body.to_s)
     assert_redirected_to(controller: "site", action: "contact_us")
   end

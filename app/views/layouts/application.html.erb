@@ -11,7 +11,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body class="layout-<%= controller.controller_name %> layout-<%= controller.action_name %> ">
+<body class="layout-<%= controller.action_name %>">
   <!-- facebook -->
   <div id="fb-root"></div>
   <script>
@@ -52,9 +52,9 @@
         <% end %>
         <ul>
           <li class="pure-menu<%= '-selected' if is_page?('home') %>"> <a href="/">Home</a></li>
-          <li class="pure-menu<%= '-selected' if is_page?('about') %>"><a href="/#about">About</a></li>
-          <li class="pure-menu<%= '-selected' if is_page?('services') %>"> <a href="/#services">Services</a></li>
-          <li class="pure-menu<%= '-selected' if is_page?('contact_us') %>"> <a href="/#contact-us">Contact Us</a></li>
+          <li class="pure-menu<%= '-selected' if is_page?('about') %>"><a href="/about">About</a></li>
+          <li class="pure-menu<%= '-selected' if is_page?('services') %>"> <a href="/services">Services</a></li>
+          <li class="pure-menu<%= '-selected' if is_page?('contact_us') %>"> <a href="/contact-us">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -73,7 +73,7 @@
       <ul class="col1">
         <li><a href="/about#about-us" class="plain">About</a></li>
         <li><a href="/about#reviews" class="plain">Reviews</a></li>
-        <li><a href="/contact-us#contact-us" class="plain">Contact Us</a></li>
+        <li><a href="/contact-us" class="plain">Contact Us</a></li>
       </ul>
     </section>
     <section class="pure-u-1 pure-u-md-1-3 is-center">
