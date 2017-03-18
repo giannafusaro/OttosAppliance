@@ -1,7 +1,4 @@
 class OttosMailer < ActionMailer::Base
-  logger.debug "////////////////////////////////////////"
-  logger.debug "#{Rails.application.secrets.inspect}"
-  logger.debug "////////////////////////////////////////"
   default from: Rails.application.secrets[:ottos_email]
 
   def customer_email (name, phone, email, message)
