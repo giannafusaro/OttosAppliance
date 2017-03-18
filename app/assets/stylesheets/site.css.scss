@@ -217,7 +217,7 @@ article.testimonial {
 div.testimonial {
   padding: 15px;
   position: relative;
-
+  margin: 0 auto;
 }
 
 
@@ -554,7 +554,6 @@ body.layout-contact_us {
 
 #body-container {
   min-height: 100%;
-  height: auto !important;
   height: 100%;
   margin: 0 auto 2em;
 }
@@ -593,6 +592,19 @@ width: 80px;
     padding: 3px;
     font-size: 16px;
     padding-right: 6px;
+  }
+}
+
+section.yelp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-size: 30px;
+    i {
+      font-size: 40px;
+      margin-right: 6px;
+    }
   }
 }
 
