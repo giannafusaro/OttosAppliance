@@ -20,7 +20,6 @@ class SiteController < ApplicationController
   end
 
   def submit_email
-
     unless OttosMailer.customer_email(params[:name],params[:phone],params[:email],params[:message]).deliver
       flash[:error] = "Problems sending mail. Please try again."
     end
@@ -31,6 +30,4 @@ class SiteController < ApplicationController
   def nope
     render layout: false
   end
-
-
 end
