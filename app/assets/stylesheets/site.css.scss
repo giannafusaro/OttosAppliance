@@ -405,9 +405,9 @@ div.testimonial {
   background-repeat: no-repeat;
   background-color: #07080b;
   background-position:top center;
-  background-size: 1400px;
+  background-size: cover;
   background-position-x: 70%;
-  background-position-y: 51%;
+  background-position-y: 120%;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -416,7 +416,6 @@ div.testimonial {
   top: 0;
   left: 0;
   position: fixed !important;
-
 }
 
 .divider-about {
@@ -946,7 +945,7 @@ div.splash-container {
   background-repeat: no-repeat;
   background-color: #07080b;
   background-position:top center;
-  background-size: 1400px;
+  background-size: contain;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -955,6 +954,7 @@ div.splash-container {
   top: 0;
   left: 0;
   position: fixed !important;
+  background-position-y: -25%;
 
 }
 
