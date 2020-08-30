@@ -1,15 +1,13 @@
 <a name="contact-us" class="plain"><h1 class="content-head is-center">Contact Us</h1></a>
 
 <div class="content">
-
   <div class="pure-g">
     <div class="l-box-lrg pure-u-1 pure-u-lg-2-5">
       <div class="contact-info-box ottos-info">
         <div class="ottos-logo"><%= image_tag("circ-ottos.png") %></div>
         <div class="hours is-center">
-          <span><strong>Hours</strong>: 8am - 5pm, Monday - Thursday</span>
-          <span> 8am - 3pm, Friday</span>
-          <span>(Closed 12-1pm)</span>
+          <span><strong>Hours</strong>: 8am - 5pm, Monday - Thursday</span><br />
+          <span>8am - 12pm, Friday</span>
         </div>
         <table class="pure-table pure-table contact-info">
           <tbody>
@@ -27,35 +25,23 @@
             </tr>
           </tbody>
         </table>
-
-
       </div>
-
-
-
-
-
-
     </div>
 
     <div class="l-box-lrg pure-u-1 pure-u-lg-3-5 map-container">
-
       <%= form_tag(submit_email_path, method: "post", class: "pure-form pure-form-stacked") do %>
         <fieldset>
-        <%= text_field_tag(:name, nil, placeholder: "Name" ) %>
-        <%= text_field_tag(:phone, nil, placeholder: "Phone Number") %>
-        <%= email_field(:email, nil, placeholder: "Email") %>
-        <%= text_area_tag(:message, nil, placeholder: "Enter your message...") %>
-        <%= submit_tag('Send', class: "send") %>
+          <%= text_field_tag(:name, nil, placeholder: "Name" ) %>
+          <%= text_field_tag(:phone, nil, placeholder: "Phone Number") %>
+          <%= email_field(:email, nil, placeholder: "Email") %>
+          <%= text_area_tag(:message, nil, placeholder: "Enter your message...") %>
+          <%= submit_tag('Send', class: "send") %>
+        </fieldset>
       <% end %>
-      </fieldset>
-      </form>
     </div>
-    <div id="google-map"></div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.5270430496385!2d-122.40690468468705!3d37.61328867978911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f777773340c9b%3A0x62d8ee674c3d0a6!2s1663%20El%20Camino%20Real%2C%20Millbrae%2C%20CA%2094030!5e0!3m2!1sen!2sus!4v1598746533122!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
 </div>
 
-
-
-
-
-</div>
+<br />

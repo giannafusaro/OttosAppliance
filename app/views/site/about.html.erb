@@ -8,196 +8,78 @@
     <a class="plain" name="about-us"><h2 class="content-head is-center">About Us</h2></a>
 
     <div class="container-about_us is-center">
-        <div class="ribbon pure-u-1 pure-u-md-1 about">
-          <%= image_tag  "Ottos_OldFront.png", class: "pure-img-responsive about-picture" %>
-          <%= image_tag  "newspaper.jpg", class: "pure-img-responsive about-picture" %>
-        </div>
+      <div class="ribbon pure-u-1 pure-u-md-1 about">
+        <%= image_tag  "Ottos_OldFront.png", class: "pure-img-responsive about-picture" %>
+        <%= image_tag  "newspaper.jpg", class: "pure-img-responsive about-picture" %>
+      </div>
 
-        <div class="l-box-lg blurb-container is-center">
-          <p class="blurb">
-            Otto's Appliance Service, Inc. was founded by Otto Fusaro in 1957.
-            Otto started this business with a love for repair and helping people.
-            Otto's warm personality and prompt, efficient service built this buisiness into what it is today.
-            Gradually, all three of his sons joined him to truly form a family business.
-          </p>
-        </div>
+      <div class="l-box-lg blurb-container is-center">
+        <p class="blurb">
+          Otto's Appliance Service, Inc. was founded by Otto Fusaro in 1957.
+          Otto started this business with a love for repair and helping people.
+          Otto's warm personality and prompt, efficient service built this buisiness into what it is today.
+          Gradually, all three of his sons joined him to truly form a family business.
+        </p>
+      </div>
 
-        <div class="ribbon pure-u-1 pure-u-md-1 about">
+      <div class="ribbon pure-u-1 pure-u-md-1 about">
+        <%= image_tag  "uncle-otto.png", class: "pure-img-responsive about-picture" %>
+        <%= image_tag  "uncleT-and-Dad.png", class: "pure-img-responsive about-picture" %>
+      </div>
 
-          <%= image_tag  "uncle-otto.png", class: "pure-img-responsive about-picture" %>
-          <%= image_tag  "uncleT-and-Dad.png", class: "pure-img-responsive about-picture" %>
-        </div>
-
-        <div class="l-box-lg blurb-container is-center">
-          <p class="blurb">
-            Otto's is unique in that we has been servicing Thermador for almost 60 years.
-            We also service Bosch, Kitchenaid, GE, Whirlpool, Maytag, Kenmore, and Insinkerator.
-            Each of our technicians has over 30 years of experience. Our experience and dependability is what separates us from many
-            other companies.
-          </p>
-        </div>
-
-
-        <div class="ribbon pure-u-1 pure-u-md-1 about">
-          <%= image_tag  "nanu-84.jpg", class: "pure-img-responsive about-picture" %>
-          <%= image_tag  "nanu-collage.png", class: "pure-img-responsive about-picture" %>
-        </div>
+      <div class="l-box-lg blurb-container is-center">
+        <p class="blurb">
+          Otto's is unique in that we has been servicing Thermador for over <%= years_since('1957-07-01') %> years.
+          We also service Bosch and Insinkerator.
+          Each of our technicians has over 30 years of experience. Our experience and dependability is what separates us from many
+          other companies.
+        </p>
+      </div>
 
 
-        <div class="l-box-lg blurb-container is-center">
-          <p class="blurb">
-            We at Otto's try hard to minimize our customer's downtime.
-            We schedule our appointments within two hours and routinely call customers at work up to 30 minutes ahead.
-            What makes us most proud is our reputation for being fair, honest, reliable, and our long list of loyal customers.
-            Our goal is and always has been to satisfy our customers.
-          </p>
-          <hr class="divider"/>
-        </div>
-    </div>
-    <hr class="divider"/>
+      <div class="ribbon pure-u-1 pure-u-md-1 about">
+        <%= image_tag  "nanu-84.jpg", class: "pure-img-responsive about-picture" %>
+        <%= image_tag  "nanu-collage.png", class: "pure-img-responsive about-picture" %>
+      </div>
 
-    <!--Reviews container  -->
-    <div class="pure-u-1 pure-u-md-1">
-      <a name="reviews" class="plain"><h2 class="content-head is-center"> Reviews </h2></a>
-      <span> Find us on <a class="yelp-link" href="http://www.yelp.com/biz/ottos-appliance-service-millbrae"><i class="fa fa-yelp">Yelp</i></a></span>
 
-      <div class="pure-u-1 reviews">
-
-      <!-- review 1 -->
-        <article class="review">
-          <span class="review-date">6/12/2018</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Tim B." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media3.fl.yelpcdn.com/photo/ZV53K8Ig9OVyDmPalptb3Q/60s.jpg" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Tim B.","https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=kCsQ-IZafEbeg2S-pKW0gA&adjust_creative=12b9R3B2RRI-QPrqPlkLGQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=12b9R3B2RRI-QPrqPlkLGQ", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Redwood City</li>
-            </ul>
-          </div>
-          <p class="review-content">Had a great experience with Otto's Appliance. They were very courteous on the phone and professional . They set up appointment right away,Joe the technician came out right on time and diagnosed my problem with in 15 minutes. The part was ordered & my appliance was repaired with only a few days downtime. Joe is a very friendly technician and very knowledgeable as well. I highly recommend this establishment.</p>
-        </article>
-
+      <div class="l-box-lg blurb-container is-center">
+        <p class="blurb">
+          We at Otto's try hard to minimize our customer's downtime.
+          We schedule our appointments within two hours and routinely call customers at work up to 30 minutes ahead.
+          What makes us most proud is our reputation for being fair, honest, reliable, and our long list of loyal customers.
+          Our goal is and always has been to satisfy our customers.
+        </p>
         <hr class="divider"/>
-
-        <!-- review 2 -->
-        <article class="review">
-          <span class="review-date">5/17/2018</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Jessica E." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media4.fl.yelpcdn.com/photo/jWld6qmPGHg2zZUIXMU13Q/60s.jpg" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Jessica E.","https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=Z2_tdvxVVhBFo7rxzmoY_A&adjust_creative=12b9R3B2RRI-QPrqPlkLGQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=12b9R3B2RRI-QPrqPlkLGQ", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Hillsborough</li>
-            </ul>
-          </div>
-          <p class="review-content">Otto's Appliance came to the rescue when my dishwasher broke on Mother's Day.  Angelo was great - knowledgeable and so pleasant to work with.  After this experience, we will always call them first for anything appliance related.</p>
-        </article>
-
-        <hr class="divider"/>
-
-
-        <!-- review 3 -->
-        <article class="review">
-          <span class="review-date">2/14/2017</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Greg C." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Greg C.","https://www.yelp.com/user_details?userid=RJgEF2kOYhLBDUMeGVVMvw", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Burlingame</li>
-            </ul>
-          </div>
-          <p class="review-content">I have used Otto's over the years and never have written a review---well time to do it now! Angelo came out to repair or Bosch dishwasher which wasnt cleaning anymore--he has served it before for minor items and always knows exactly what it needs--he;s efficient and expert --doesn't push anything--all work all professional. And he is fast because he knows these machines like nobody's business. His estimate was right on the mark--we were boarderline---Buy new or "fix"--know we might have limited life--we discussed--and i decided to fix---its been a great machine and mostly trouble free--he agreed and now it runs like new. One thing --he will fix other little things he sees knowing they are close to broken--(why not replace the $20 part now when its all apart and save another call) he cleans pumps and does other things you wouldnt even know to ask. Use these guys---they are the best</p>
-        </article>
-
-        <hr class="divider"/>
-
-        <!-- review 4 -->
-        <article class="review">
-          <span class="review-date">7/31/2016</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Vahe K." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media3.fl.yelpcdn.com/photo/XQcyMMeQTDk4ViK-utQERQ/60s.jpg" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Vahe K.","https://www.yelp.com/user_details?userid=EjK3BYR48K9P-1Y2uL0Ijg", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Palo Alto</li>
-            </ul>
-          </div>
-          <p class="review-content">Another great experience. If you have a Thermador...keep it. It can be fixed and Otto can fix it for you.  In medicine there is the concept of the Doctor's Doctor - in this field, you can't do better and if you can, Otto(and Angelo) would probably refer you. It feels lousy when you doubt the quality of workmanship and it feels great when you can check the box and say: I got 99 problems but this ain't one. Thank you brother(s)</p>
-        </article>
-
-        <hr class="divider"/>
-
-        <!-- review 5-->
-        <article class="review">
-          <span class="review-date">5/11/2016</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Mary B." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media3.fl.yelpcdn.com/photo/vA2QpZdjuLI30MSDzbq4HQ/60s.jpg" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Re-pley Z.","http://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=l4RJ1PbOq0kogXsleoTWqA", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">San Francisco</li>
-            </ul>
-          </div>
-          <p class="review-content">I had problems with a faulty dishwasher installation performed by another company.  Bosch gave Otto's as a certified repair sevice.  Tony was able to set up the appointment by phone and by looking at a picture of the problem I sent him over the Internet.   Angelo came out and performed a top notch repair.  Truly professional advice efficient  all around and they really know their Bosch products.</p>
-        </article>
-
-        <hr class="divider"/>
-
-        <!-- review 6-->
-        <article class="review">
-          <span class="review-date">2/14/2016</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="sheila j." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media3.fl.yelpcdn.com/photo/r76-3VWfDibjAVbiH7MiLg/60s.jpg" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "sheila j.","http://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=r1Tce_nklHt28eZ6PaSf6A", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Burlingame</li>
-            </ul>
-          </div>
-          <p class="review-content">This service was above and beyond all expectations!  Prompt, fixed the oven and gave me several options!  Would highly recommend!</p>
-        </article>
-
-        <hr class="divider"/>
-
-        <!-- review 7 -->
-        <article class="review">
-          <span class="review-date">9/28/2016</span>
-          <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-          <div class="reviewer-info">
-            <img alt="Ben K." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png" width="60">
-            <ul class="info-contents">
-              <li><strong><%= link_to "Ben K.","http://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=86Fm6e-OYOd75drIZrCbtA", class: "reviewer-name" %></strong></li>
-              <li class="reviewer-location">Menlo Park</li>
-            </ul>
-          </div>
-          <p class="review-content">Angelo fixed my dishwasher when no one else could and even gave me a great deal on the cost. I wish I could have them fix everything that goes wrong in life.</p>
-          </article>
-
-          <hr class="divider"/>
-
-          <!-- review 8 -->
-          <article class="review">
-            <span class="review-date">9/26/2016</span>
-            <span class="review-rating"><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i><i class="fa fa-star fa-x"></i></span>
-            <div class="reviewer-info">
-              <img alt="John M." class="pure-img-responsive reviewer-picture" height="60" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png" width="60">
-              <ul class="info-contents">
-                <li><strong><%= link_to "John M.","http://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=vLVxGNGX658UZHktgrmyyQ", class: "reviewer-name" %></strong></li>
-                <li class="reviewer-location">Honolulu</li>
-              </ul>
-            </div>
-            <p class="review-content">We had Otto come out and service our Thermador Range and oven.  He was extremely competent- diagnosed the issues very quickly and had it repaired in less than an hour.  He is also a really nice guy, so overall was an outstanding experience.</p>
-          </article>
-
-
-          <hr class="divider to-hide">
-
-        </div>
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <hr class="divider"/>
+
+    <!--Reviews container  -->
+    <div class="pure-u-1 pure-u-md-1 is-center">
+      <a name="reviews" class="plain"><h2 class="content-head is-center"> Reviews </h2></a>
+
+      <div class="pure-u-1 reviews">
+        <span class="yelp-review" data-review-id="ISdecD11Hlgs9rX5-F1RLQ" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=i7C2uQeeIYkbehUEfwpkIw" rel="nofollow noopener">William S.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=ISdecD11Hlgs9rX5-F1RLQ" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="-sORTBBva0wDGXXMYLAv4A" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=TVVhN_MV6ShoToC6nfeukw" rel="nofollow noopener">Julie B.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=-sORTBBva0wDGXXMYLAv4A" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="t7Yxa7leqYz2I6rbBYy2aw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=iS7GgtMtk9uEN7dubb57vg" rel="nofollow noopener">Tina P.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=t7Yxa7leqYz2I6rbBYy2aw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="8wlhVi7hvu5Q2IguxMEEjg" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=6TPJLqVy4gMvekxd39nVfQ" rel="nofollow noopener">Joe C.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=8wlhVi7hvu5Q2IguxMEEjg" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="XW3O03GVJMS0L4urc1D7Jw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=l3dNh245EN7xoKjAijy5Kg" rel="nofollow noopener">Fred H.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=XW3O03GVJMS0L4urc1D7Jw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="7lOR5mev9NXrKCM-hYcchQ" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=Vn4Qn1v3MGB_TpA2YQbN6g" rel="nofollow noopener">Akiko I.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=7lOR5mev9NXrKCM-hYcchQ" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="3y8kBNcoW166wsaKVXszJw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=IM0SsXN7WPROeEtnrDzKAQ" rel="nofollow noopener">Aaron K.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=3y8kBNcoW166wsaKVXszJw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br />
+        <span class="yelp-review" data-review-id="wd-GBJ-AWPXUeJSlYiByZA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=_b6V-ix78856U5_tnihJFw" rel="nofollow noopener">Cheryl C.</a>'s <a href="https://www.yelp.com/biz/ottos-appliance-service-millbrae?hrid=wd-GBJ-AWPXUeJSlYiByZA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/vCPm6UsSiR4k5T6S-wzRhw" rel="nofollow noopener">Otto's Appliance Service</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+      </div>
+    </div>
+
+  </div>
 
     <div class="footer footer-top l-box pure-g">
       <section class="pure-u-1 pure-u-md-1-3 is-center">

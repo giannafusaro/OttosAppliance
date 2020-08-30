@@ -12,4 +12,8 @@ module ApplicationHelper
   def is_page? name
     controller.action_name == name
   end
+
+  def years_since(date)
+    ((Date.today - Date.parse(date)) / 365).to_i
+  end
 end

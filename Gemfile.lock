@@ -48,10 +48,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
-    dotenv (2.5.0)
-    dotenv-rails (2.5.0)
-      dotenv (= 2.5.0)
-      railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     execjs (2.7.0)
     faraday (0.15.2)
@@ -165,7 +161,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.0.0)
-  dotenv-rails
   jbuilder
   jquery-rails
   mysql2 (~> 0.3.18)
@@ -180,4 +175,4 @@ DEPENDENCIES
   yelp
 
 BUNDLED WITH
-   1.16.3
+   2.1.4

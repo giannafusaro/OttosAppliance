@@ -18,7 +18,7 @@
     <div class="skew l"></div>
 
     <div class="main">
-      <div>Celebrating <span>60</span> years of service</div>
+      <div>Celebrating <span><%= years_since('1957-07-01') %></span> years of service</div>
     </div>
 
     <div class="skew r"></div>
@@ -56,9 +56,7 @@
 
           <div class="hours is-center">
             <strong>Hours</strong>: 8am - 5pm, Monday - Thursday
-            <br/> 8am - 3pm, Friday
-            <br/>
-            (Closed 12-1pm)
+            <br/> 8am - 12pm, Friday
           </div>
           <table class="pure-table pure-table contact-info">
             <tbody>
@@ -83,31 +81,16 @@
   <section class="ribbon l-box-lrg pure-g brand-images">
     <h2 class="content-head content-head-ribbon brand-title">Brands We Service</h2>
 
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
+    <div class="pure-u-1 pure-u-md-1-3 is-center">
       <%= image_tag  "Thermador.png", class: "pure-img-responsive brand" %>
     </div>
 
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
+    <div class="pure-u-1 pure-u-md-1-3 is-center">
       <%= image_tag  "Bosch.png", class: "pure-img-responsive brand" %>
     </div>
 
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
+    <div class="pure-u-1 pure-u-md-1-3 is-center">
       <%= image_tag  "Insinkerator.png", class: "pure-img-responsive brand" %>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
-      <%= image_tag  "Kitchenaid.png", class: "pure-img-responsive brand" %>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
-      <%= image_tag  "Maytag.png", class: "pure-img-responsive brand" %>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
-      <%= image_tag  "GE_Appliances.png", class: "pure-img-responsive brand" %>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
-      <%= image_tag  "Kenmore.png", class: "pure-img-responsive brand" %>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-4 is-center">
-      <%= image_tag  "Whirlpool.png", class: "pure-img-responsive brand" %>
     </div>
   </section>
 

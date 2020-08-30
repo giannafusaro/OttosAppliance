@@ -348,7 +348,7 @@ article.testimonial {
   margin-top: 41px;
   background: url(asset-path("left-message-arrow.png")) no-repeat scroll 0 0;
   float: left;
-  left: -26px;
+  left: -23px;
 }
 
 
@@ -404,15 +404,13 @@ div.testimonial {
   background-image: url(asset-path("golden-gate1.jpg")) !important;
   background-repeat: no-repeat;
   background-color: #07080b;
-  background-position:top center;
+  background-position: center center;
   background-size: cover;
-  background-position-x: 70%;
-  background-position-y: 120%;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
   width: 100%;
-  height: 100%;
+  height: 500px;
   top: 0;
   left: 0;
   position: fixed !important;
@@ -477,6 +475,7 @@ div.testimonial {
 
 
 .reviews {
+  width: 700px;
   height: 100%;
   padding: 10px
 }
@@ -632,6 +631,18 @@ img.appliance {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+
+.locations-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  li {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 /////////////////////////////////////////
 /////////// contact page ////////////////
 ///////////////////////////////////////
@@ -762,7 +773,6 @@ section.yelp {
 }
 
 .footer {
-
   padding: 2.5em;
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
@@ -944,18 +954,16 @@ div.splash-container {
   background-image: url(asset-path("ottos-bg.jpg")) !important;
   background-repeat: no-repeat;
   background-color: #07080b;
-  background-position:top center;
-  background-size: contain;
+  background-position: center center;
+  background-size: cover;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
   width: 100%;
-  height: 100%;
+  height: 500px;
   top: 0;
   left: 0;
   position: fixed !important;
-  background-position-y: -25%;
-
 }
 
 
